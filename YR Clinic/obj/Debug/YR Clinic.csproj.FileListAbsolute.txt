@@ -1,0 +1,78 @@
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\bin\Debug\YR Clinic.exe.config
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\bin\Debug\YR Clinic.exe
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\bin\Debug\YR Clinic.pdb
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR Clinic.csprojResolveAssemblyReference.cache
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminLogin.resources
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminMenu.resources
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierLogin.resources
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierMenu.resources
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FMenu.resources
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.Properties.Resources.resources
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR Clinic.csproj.GenerateResource.Cache
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR Clinic.exe
+c:\users\dhadotid\documents\visual studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR Clinic.pdb
+C:\Users\dhadotid\Documents\Visual Studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminDoctor.resources
+C:\Users\dhadotid\Documents\Visual Studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminPatient.resources
+C:\Users\dhadotid\Documents\Visual Studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminSpecialist.resources
+C:\Users\dhadotid\Documents\Visual Studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminDrugs.resources
+C:\Users\dhadotid\Documents\Visual Studio 2015\Projects\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierListDoctor.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\bin\Debug\YR Clinic.exe.config
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR Clinic.exe
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR Clinic.pdb
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\bin\Debug\YR Clinic.exe
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\bin\Debug\YR Clinic.pdb
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR Clinic.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminDoctor.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminDrugs.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminLogin.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminMenu.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminPatient.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminSpecialist.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierListDoctor.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierLogin.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierMenu.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierPatient.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FMenu.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.Properties.Resources.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR Clinic.csproj.GenerateResource.Cache
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminAddAccountCashier.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminCashier.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminChangePasswordCashier.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminDeletePasswordCashier.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminPaymentHistory.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminSearch.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminSearchRecipe.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminSearchTreatment.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierPayment.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierRecipe.resources
+C:\Users\HP\Documents\project Q5\New folder\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierTreatment.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\bin\Debug\YR Clinic.exe.config
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR Clinic.exe
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\bin\Debug\YR Clinic.exe
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\bin\Debug\YR Clinic.pdb
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR Clinic.csprojResolveAssemblyReference.cache
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminAddAccountCashier.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminCashier.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminChangePasswordCashier.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminDeletePasswordCashier.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminDoctor.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminDrugs.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminLogin.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminMenu.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminPatient.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminPaymentHistory.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminSearch.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminSearchRecipe.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminSearchTreatment.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FAdminSpecialist.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierListDoctor.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierLogin.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierMenu.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierPatient.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierPayment.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierRecipe.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FCashierTreatment.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.FMenu.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR_Clinic.Properties.Resources.resources
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR Clinic.csproj.GenerateResource.Cache
+D:\File Penting\Q5M2\YR Clinic\YR Clinic\YR Clinic\obj\Debug\YR Clinic.pdb

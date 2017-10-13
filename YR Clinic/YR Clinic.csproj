@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{023AEA49-B922-4ACE-9D4A-EC733303A8D4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YR_Clinic</RootNamespace>
+    <AssemblyName>YR Clinic</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="config\DBConnection.cs" />
+    <Compile Include="FAdminAddAccountCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminAddAccountCashier.Designer.cs">
+      <DependentUpon>FAdminAddAccountCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminCashier.Designer.cs">
+      <DependentUpon>FAdminCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminChangePasswordCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminChangePasswordCashier.Designer.cs">
+      <DependentUpon>FAdminChangePasswordCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminDeletePasswordCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminDeletePasswordCashier.Designer.cs">
+      <DependentUpon>FAdminDeletePasswordCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminDoctor.Designer.cs">
+      <DependentUpon>FAdminDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminDrugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminDrugs.Designer.cs">
+      <DependentUpon>FAdminDrugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminLogin.Designer.cs">
+      <DependentUpon>FAdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminMenu.Designer.cs">
+      <DependentUpon>FAdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminPatient.Designer.cs">
+      <DependentUpon>FAdminPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminPaymentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminPaymentHistory.Designer.cs">
+      <DependentUpon>FAdminPaymentHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminSearch.Designer.cs">
+      <DependentUpon>FAdminSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminSearchRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminSearchRecipe.Designer.cs">
+      <DependentUpon>FAdminSearchRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminSearchTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminSearchTreatment.Designer.cs">
+      <DependentUpon>FAdminSearchTreatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdminSpecialist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdminSpecialist.Designer.cs">
+      <DependentUpon>FAdminSpecialist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCashierListDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCashierListDoctor.Designer.cs">
+      <DependentUpon>FCashierListDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCashierLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCashierLogin.Designer.cs">
+      <DependentUpon>FCashierLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCashierMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCashierMenu.Designer.cs">
+      <DependentUpon>FCashierMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCashierPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCashierPatient.Designer.cs">
+      <DependentUpon>FCashierPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCashierPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCashierPayment.Designer.cs">
+      <DependentUpon>FCashierPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCashierRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCashierRecipe.Designer.cs">
+      <DependentUpon>FCashierRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCashierTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCashierTreatment.Designer.cs">
+      <DependentUpon>FCashierTreatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMenu.Designer.cs">
+      <DependentUpon>FMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FAdminAddAccountCashier.resx">
+      <DependentUpon>FAdminAddAccountCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminCashier.resx">
+      <DependentUpon>FAdminCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminChangePasswordCashier.resx">
+      <DependentUpon>FAdminChangePasswordCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminDeletePasswordCashier.resx">
+      <DependentUpon>FAdminDeletePasswordCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminDoctor.resx">
+      <DependentUpon>FAdminDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminDrugs.resx">
+      <DependentUpon>FAdminDrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminLogin.resx">
+      <DependentUpon>FAdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminMenu.resx">
+      <DependentUpon>FAdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminPatient.resx">
+      <DependentUpon>FAdminPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminPaymentHistory.resx">
+      <DependentUpon>FAdminPaymentHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminSearch.resx">
+      <DependentUpon>FAdminSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminSearchRecipe.resx">
+      <DependentUpon>FAdminSearchRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminSearchTreatment.resx">
+      <DependentUpon>FAdminSearchTreatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdminSpecialist.resx">
+      <DependentUpon>FAdminSpecialist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCashierListDoctor.resx">
+      <DependentUpon>FCashierListDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCashierLogin.resx">
+      <DependentUpon>FCashierLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCashierMenu.resx">
+      <DependentUpon>FCashierMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCashierPatient.resx">
+      <DependentUpon>FCashierPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCashierPayment.resx">
+      <DependentUpon>FCashierPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCashierRecipe.resx">
+      <DependentUpon>FCashierRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCashierTreatment.resx">
+      <DependentUpon>FCashierTreatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMenu.resx">
+      <DependentUpon>FMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
