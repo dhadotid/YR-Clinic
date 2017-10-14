@@ -25,6 +25,11 @@ namespace YR_Clinic
             txtRD.Text = autoid();
             txtIdRecipe.Text = autoidrecipe();
             isidgvdrug();
+
+            dt.Columns.Add("ID Drug");
+            dt.Columns.Add("DrugName");
+            dt.Columns.Add("Dose");
+            dt.Columns.Add("Qty");
         }
 
         private string autoid()
@@ -210,6 +215,7 @@ namespace YR_Clinic
 
         private void pbBack_Click(object sender, EventArgs e)
         {
+            insertdgvrecipe();
             FCashierMenu fcm = new FCashierMenu();
             fcm.Show();
             this.Hide();
@@ -240,7 +246,15 @@ namespace YR_Clinic
                 MessageBox.Show(xe.Message);
             }
         }
-        
+        DataTable dt = new DataTable();
+        DataRow dr;
+        private void dgvRecipe_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvRecipe.SelectedRows)
+            {
+                dgvRecipe.Rows.RemoveAt(row.Index);
+            }
+        }
         private void pbSave_Click(object sender, EventArgs e)
         {
             if(txtDose.Text == "" || txtSubtotal.Text == "")
@@ -275,50 +289,95 @@ namespace YR_Clinic
                             DialogResult result = MessageBox.Show("Do you want to save record " + txtRD.Text + "?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (result == DialogResult.Yes)
                             {
+                                string drugname = "";
                                 string info = "";
                                 try
                                 {
                                     info = con.openconnection();
                                     if (info == "OK")
                                     {
-                                        string query = "exec pcdRecipeDetail @idrecipe,@iddrug,@qty,@dose";
+                                        string query = "select * from Recipe.Drug where Id_Drug ='" + txtDrug.Text + "'";
                                         SqlCommand com = new SqlCommand(query, con.con);
-                                        com.Parameters.AddWithValue("@idrecipe", txtIdRecipe.Text);
-                                        com.Parameters.AddWithValue("@iddrug", txtDrug.Text);
-                                        com.Parameters.AddWithValue("@qty", txtQty.Text);
-                                        com.Parameters.AddWithValue("@dose", txtDose.Text);
-                                        if (com.ExecuteNonQuery() > 0)
+                                        SqlDataReader sdr = com.ExecuteReader();
+                                        while (sdr.Read())
                                         {
-                                            info = "OK";
-                                            MessageBox.Show("Success Insert data");
-                                            txtIdRecipe.Text = autoidrecipe();
-                                            txtRD.Text = autoid();
-                                            txtDrug.Clear();
-                                            txtQty.Clear();
-                                            txtDose.Clear();
-                                            txtSubtotal.Clear();
-                                            isidgvdrug();
+                                            //string idpay = dr["Id_Payment"].ToString();
+                                            drugname = sdr["DrugName"].ToString();
+
                                         }
-                                        else
-                                        {
-                                            info = "Gagal";
-                                        }
+                                        sdr.Close();
                                     }
                                     if (con.closeconnection() == "OK")
                                     {
                                         info = "OK";
                                     }
                                 }
-                                catch (Exception ex)
+                                catch (Exception xe)
                                 {
-                                    MessageBox.Show(ex.Message);
+                                    MessageBox.Show(xe.Message);
                                 }
+                                dr = dt.NewRow();
+                                dr["ID Drug"] = txtDrug.Text;
+                                dr["DrugName"] = drugname;
+                                dr["Qty"] = txtQty.Text;
+                                dr["Dose"] = txtDose.Text;
+                                dt.Rows.Add(dr);
+                                dgvRecipe.DataSource = dt;
+
+                                txtIdRecipe.Text = autoidrecipe();
+                                txtRD.Text = autoid();
+                                txtDrug.Clear();
+                                txtQty.Clear();
+                                txtDose.Clear();
+                                txtSubtotal.Clear();
+                                isidgvdrug();
                             }
                         }
                     }
                     else
                     {
                         MessageBox.Show("Please fill in the data");
+                    }
+                }
+            }
+        }
+
+        private void insertdgvrecipe()
+        {
+            if (dgvRecipe.Rows.Count > 0)
+            {
+                for (int i = 0; i < dgvRecipe.Rows.Count; i++)
+                {
+                    string info = "";
+                    try
+                    {
+                        info = con.openconnection();
+                        if (info == "OK")
+                        {
+                            string query = "exec pcdRecipeDetail @idrecipe,@iddrug,@qty,@dose";
+                            SqlCommand com = new SqlCommand(query, con.con);
+                            com.Parameters.AddWithValue("@idrecipe", txtIdRecipe.Text);
+                            com.Parameters.AddWithValue("@iddrug", dgvRecipe.Rows[i].Cells["ID Drug"].Value);
+                            com.Parameters.AddWithValue("@qty", dgvRecipe.Rows[i].Cells["Qty"].Value);
+                            com.Parameters.AddWithValue("@dose", dgvRecipe.Rows[i].Cells["Dose"].Value);
+                            if (com.ExecuteNonQuery() > 0)
+                            {
+                                info = "OK";
+                                MessageBox.Show("Success Insert data");
+                            }
+                            else
+                            {
+                                info = "Gagal";
+                            }
+                        }
+                        if (con.closeconnection() == "OK")
+                        {
+                            info = "OK";
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
                     }
                 }
             }

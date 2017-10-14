@@ -57,7 +57,6 @@ namespace YR_Clinic
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void isidgvSpecialist()

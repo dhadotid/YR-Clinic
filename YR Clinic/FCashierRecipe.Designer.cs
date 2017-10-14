@@ -52,10 +52,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvRecipe = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrug)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecipe)).BeginInit();
             this.SuspendLayout();
             // 
             // pbBack
@@ -108,7 +111,7 @@
             this.dgvDrug.Location = new System.Drawing.Point(426, 137);
             this.dgvDrug.Name = "dgvDrug";
             this.dgvDrug.ReadOnly = true;
-            this.dgvDrug.Size = new System.Drawing.Size(520, 307);
+            this.dgvDrug.Size = new System.Drawing.Size(520, 150);
             this.dgvDrug.TabIndex = 72;
             this.dgvDrug.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDrug_RowHeaderMouseClick);
             // 
@@ -292,12 +295,36 @@
             this.label1.TabIndex = 54;
             this.label1.Text = "Recipe";
             // 
+            // dgvRecipe
+            // 
+            this.dgvRecipe.AllowUserToAddRows = false;
+            this.dgvRecipe.AllowUserToDeleteRows = false;
+            this.dgvRecipe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecipe.Location = new System.Drawing.Point(426, 323);
+            this.dgvRecipe.Name = "dgvRecipe";
+            this.dgvRecipe.ReadOnly = true;
+            this.dgvRecipe.Size = new System.Drawing.Size(520, 150);
+            this.dgvRecipe.TabIndex = 77;
+            this.dgvRecipe.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRecipe_RowHeaderMouseDoubleClick);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(511, 294);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 26);
+            this.label10.TabIndex = 78;
+            this.label10.Text = "Recipe";
+            // 
             // FCashierRecipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(958, 481);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.dgvRecipe);
             this.Controls.Add(this.pbBack);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pbSearch);
@@ -330,6 +357,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrug)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecipe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,5 +388,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvRecipe;
+        private System.Windows.Forms.Label label10;
     }
 }
