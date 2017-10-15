@@ -220,6 +220,7 @@
             this.pbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSave.TabIndex = 68;
             this.pbSave.TabStop = false;
+            this.pbSave.Click += new System.EventHandler(this.pbSave_Click);
             // 
             // txtTotalPayment
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +17,12 @@ namespace YR_Clinic
     public partial class FCashierPayment : Form
     {
         DBConnection con = new DBConnection();
+        string idrecipe;
         double kembalian;
         public FCashierPayment()
         {
             InitializeComponent();
-            txtIdPayment.Text = autoidrecipe();
+            txtIdPayment.Text = autoid();
             getvalue();
             loaddatarecipe();
         }
@@ -40,7 +42,7 @@ namespace YR_Clinic
                 info = con.openconnection();
                 if (info == "OK")
                 {
-                    string query = "select b.Id_Treatment,a.Patient_Name, x.DoctorName ,b.Diagnose,b.DateTreatment,c.PaymentDoctor,c.PaymentDrug,c.TotalPayment from Patient.Patient a join Patient.Treatment b on a.Id_Patient = b.Id_Patient join Patient.Payment c on c.Id_Treatment = b.Id_Treatment join Doctor.Doctor x on b.Id_Doctor = x.Id_Doctor where Id_Payment ='" + txtIdPayment.Text + "'";
+                    string query = "select b.Id_Treatment,a.Patient_Name, x.DoctorName ,b.Diagnose,b.DateTreatment,c.PaymentDoctor,c.PaymentDrug,c.TotalPayment, y.Id_Recipe from Patient.Patient a join Patient.Treatment b on a.Id_Patient = b.Id_Patient join Patient.Payment c on c.Id_Treatment = b.Id_Treatment join Doctor.Doctor x on b.Id_Doctor = x.Id_Doctor join Recipe.Recipe y on b.Id_Recipe = y.Id_Recipe where Id_Payment ='" + txtIdPayment.Text + "'";
                     SqlCommand com = new SqlCommand(query, con.con);
                     SqlDataReader dr = com.ExecuteReader();
                     while (dr.Read())
@@ -54,6 +56,7 @@ namespace YR_Clinic
                         string paydoctor = dr["PaymentDoctor"].ToString();
                         string paydrug = dr["PaymentDrug"].ToString();
                         string totpay = dr["TotalPayment"].ToString();
+                        idrecipe = dr["Id_Recipe"].ToString();
                         txtIdTreatment.Text = idtreat;
                         txtPatientName.Text = pname;
                         txtDoctorName.Text = pdoc;
@@ -77,7 +80,7 @@ namespace YR_Clinic
             }
         }
 
-        private string autoidrecipe()
+        private string autoid()
         {
             string info = "";
             string newcode = "";
@@ -141,7 +144,7 @@ namespace YR_Clinic
 
         private void txtMoney_Validating(object sender, CancelEventArgs e)
         {
-            if (txtMoney.Text == "" || Regex.IsMatch(txtMoney.Text, @"^\d+$") == false || Convert.ToInt32(txtMoney.Text) < Convert.ToInt32(txtTotalPayment.Text))
+            if (txtMoney.Text == "" || Regex.IsMatch(txtMoney.Text, @"^\d+$") == false || Convert.ToDouble(txtMoney.Text) < Convert.ToDouble(txtTotalPayment.Text))
             {
                 txtMoney.Focus();
                 lblNullMoney.Visible = true;
@@ -169,6 +172,52 @@ namespace YR_Clinic
                 {
 
                 }
+            }
+        }
+
+        private void pbSave_Click(object sender, EventArgs e)
+        {
+            if(txtMoney.Text == "" || txtChange.Text == "")
+            {
+                MessageBox.Show("Please fill in the data");
+            }
+            else if(Convert.ToDouble(txtMoney.Text) < Convert.ToDouble(txtTotalPayment.Text))
+            {
+                MessageBox.Show("less money");
+            }
+            else
+            {
+                FCashierReciptPayment fcrp = new FCashierReciptPayment();
+                CRReciptPayment crrp = new CRReciptPayment();
+                TextObject to = (TextObject)crrp.ReportDefinition.Sections["Section2"].ReportObjects["IdPayment"];
+                to.Text = txtIdPayment.Text;
+                TextObject totreatment = (TextObject)crrp.ReportDefinition.Sections["Section2"].ReportObjects["IdTreatment"];
+                totreatment.Text = txtIdTreatment.Text;
+                TextObject topatientname = (TextObject)crrp.ReportDefinition.Sections["Section2"].ReportObjects["PatientName"];
+                topatientname.Text = txtPatientName.Text;
+                TextObject todoctorname = (TextObject)crrp.ReportDefinition.Sections["Section2"].ReportObjects["DoctorName"];
+                todoctorname.Text = txtDoctorName.Text;
+                TextObject toidrecipe = (TextObject)crrp.ReportDefinition.Sections["Section2"].ReportObjects["IdRecipe"];
+                toidrecipe.Text = idrecipe;
+                TextObject todiagnose = (TextObject)crrp.ReportDefinition.Sections["Section2"].ReportObjects["Diagnose"];
+                todiagnose.Text = txtDiagnose.Text;
+
+                fcrp.crViewPayment.ReportSource = crrp;
+                fcrp.crViewPayment.Refresh();
+                fcrp.Show();
+                this.Hide();
+                txtTotalPayment.Clear();
+                txtPaymentDrug.Clear();
+                txtPaymentDoctor.Clear();
+                txtIdTreatment.Clear();
+                txtIdPayment.Clear();
+                txtPatientName.Clear();
+                txtDoctorName.Clear();
+                txtDiagnose.Clear();
+                txtDateTreatment.Clear();
+                txtMoney.Focus();
+
+                txtIdPayment.Text = autoid();
             }
         }
     }
