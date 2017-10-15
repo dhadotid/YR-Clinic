@@ -78,9 +78,9 @@
             this.label9.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(348, 447);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 26);
+            this.label9.Size = new System.Drawing.Size(45, 26);
             this.label9.TabIndex = 75;
-            this.label9.Text = "Save";
+            this.label9.Text = "Add";
             // 
             // pbSearch
             // 

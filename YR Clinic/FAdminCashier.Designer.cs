@@ -46,10 +46,10 @@
             // lblDelete
             // 
             this.lblDelete.AutoSize = true;
-            this.lblDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDelete.Font = new System.Drawing.Font("Minion Pro", 14.25F);
             this.lblDelete.Location = new System.Drawing.Point(509, 208);
             this.lblDelete.Name = "lblDelete";
-            this.lblDelete.Size = new System.Drawing.Size(208, 24);
+            this.lblDelete.Size = new System.Drawing.Size(192, 26);
             this.lblDelete.TabIndex = 23;
             this.lblDelete.Text = "Delete Account Cashier";
             // 

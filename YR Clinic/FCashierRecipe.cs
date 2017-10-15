@@ -215,10 +215,23 @@ namespace YR_Clinic
 
         private void pbBack_Click(object sender, EventArgs e)
         {
-            insertdgvrecipe();
-            FCashierMenu fcm = new FCashierMenu();
-            fcm.Show();
-            this.Hide();
+            if (dgvRecipe.Rows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Are you sure the transaction has been completed?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    insertdgvrecipe();
+                    FCashierMenu fcm = new FCashierMenu();
+                    fcm.Show();
+                    this.Hide();
+                }
+            }
+            else
+            {
+                FCashierMenu fcm = new FCashierMenu();
+                fcm.Show();
+                this.Hide();
+            }
         }
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
@@ -286,7 +299,7 @@ namespace YR_Clinic
                         }
                         else
                         {
-                            DialogResult result = MessageBox.Show("Do you want to save record " + txtRD.Text + "?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            DialogResult result = MessageBox.Show("Are your sure want to add data " + txtDrug.Text + "?", "Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (result == DialogResult.Yes)
                             {
                                 string drugname = "";
@@ -363,7 +376,7 @@ namespace YR_Clinic
                             if (com.ExecuteNonQuery() > 0)
                             {
                                 info = "OK";
-                                MessageBox.Show("Success Insert data");
+                                //MessageBox.Show("Success Insert data");
                             }
                             else
                             {

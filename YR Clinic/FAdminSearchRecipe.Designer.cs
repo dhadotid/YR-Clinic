@@ -33,11 +33,11 @@
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvPay = new System.Windows.Forms.DataGridView();
+            this.dgvRecipe = new System.Windows.Forms.DataGridView();
             this.lblPayHis = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecipe)).BeginInit();
             this.SuspendLayout();
             // 
             // pbBack
@@ -68,6 +68,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(199, 30);
             this.txtSearch.TabIndex = 21;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // label1
             // 
@@ -80,16 +81,16 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Search";
             // 
-            // dgvPay
+            // dgvRecipe
             // 
-            this.dgvPay.AllowUserToAddRows = false;
-            this.dgvPay.AllowUserToDeleteRows = false;
-            this.dgvPay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPay.Location = new System.Drawing.Point(12, 165);
-            this.dgvPay.Name = "dgvPay";
-            this.dgvPay.ReadOnly = true;
-            this.dgvPay.Size = new System.Drawing.Size(649, 303);
-            this.dgvPay.TabIndex = 19;
+            this.dgvRecipe.AllowUserToAddRows = false;
+            this.dgvRecipe.AllowUserToDeleteRows = false;
+            this.dgvRecipe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecipe.Location = new System.Drawing.Point(12, 165);
+            this.dgvRecipe.Name = "dgvRecipe";
+            this.dgvRecipe.ReadOnly = true;
+            this.dgvRecipe.Size = new System.Drawing.Size(649, 303);
+            this.dgvRecipe.TabIndex = 19;
             // 
             // lblPayHis
             // 
@@ -111,7 +112,7 @@
             this.Controls.Add(this.pbSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvPay);
+            this.Controls.Add(this.dgvRecipe);
             this.Controls.Add(this.lblPayHis);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -120,7 +121,7 @@
             this.Text = "FAdminSearchRecipe";
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecipe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,7 +133,7 @@
         private System.Windows.Forms.PictureBox pbSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvPay;
+        private System.Windows.Forms.DataGridView dgvRecipe;
         private System.Windows.Forms.Label lblPayHis;
 
     }

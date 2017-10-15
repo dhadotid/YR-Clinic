@@ -100,11 +100,12 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Minion Pro", 14.25F);
             this.txtSearch.Location = new System.Drawing.Point(575, 126);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(141, 29);
+            this.txtSearch.Size = new System.Drawing.Size(141, 30);
             this.txtSearch.TabIndex = 61;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // label8
             // 
@@ -126,6 +127,7 @@
             this.dgvCashier.ReadOnly = true;
             this.dgvCashier.Size = new System.Drawing.Size(370, 309);
             this.dgvCashier.TabIndex = 59;
+            this.dgvCashier.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCashier_RowHeaderMouseClick);
             // 
             // pbBack
             // 
@@ -157,6 +159,7 @@
             this.pbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSave.TabIndex = 56;
             this.pbSave.TabStop = false;
+            this.pbSave.Click += new System.EventHandler(this.pbSave_Click);
             // 
             // lblNewPass
             // 
@@ -194,6 +197,7 @@
             // 
             // txtOldPass
             // 
+            this.txtOldPass.Enabled = false;
             this.txtOldPass.Font = new System.Drawing.Font("Minion Pro", 14.25F);
             this.txtOldPass.Location = new System.Drawing.Point(216, 195);
             this.txtOldPass.Name = "txtOldPass";

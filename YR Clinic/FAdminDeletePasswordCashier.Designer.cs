@@ -30,15 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAdminDeletePasswordCashier));
             this.pbBack = new System.Windows.Forms.PictureBox();
-            this.lblDelete = new System.Windows.Forms.Label();
-            this.pbDelete = new System.Windows.Forms.PictureBox();
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvCashier = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCashier)).BeginInit();
             this.SuspendLayout();
@@ -53,26 +50,6 @@
             this.pbBack.TabIndex = 23;
             this.pbBack.TabStop = false;
             this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
-            // 
-            // lblDelete
-            // 
-            this.lblDelete.AutoSize = true;
-            this.lblDelete.Font = new System.Drawing.Font("Minion Pro", 14.25F);
-            this.lblDelete.Location = new System.Drawing.Point(26, 373);
-            this.lblDelete.Name = "lblDelete";
-            this.lblDelete.Size = new System.Drawing.Size(61, 26);
-            this.lblDelete.TabIndex = 22;
-            this.lblDelete.Text = "Delete";
-            // 
-            // pbDelete
-            // 
-            this.pbDelete.Image = ((System.Drawing.Image)(resources.GetObject("pbDelete.Image")));
-            this.pbDelete.Location = new System.Drawing.Point(12, 296);
-            this.pbDelete.Name = "pbDelete";
-            this.pbDelete.Size = new System.Drawing.Size(100, 74);
-            this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDelete.TabIndex = 21;
-            this.pbDelete.TabStop = false;
             // 
             // pbSearch
             // 
@@ -91,6 +68,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(137, 30);
             this.txtSearch.TabIndex = 19;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // label2
             // 
@@ -110,8 +88,9 @@
             this.dgvCashier.Location = new System.Drawing.Point(12, 140);
             this.dgvCashier.Name = "dgvCashier";
             this.dgvCashier.ReadOnly = true;
-            this.dgvCashier.Size = new System.Drawing.Size(411, 150);
+            this.dgvCashier.Size = new System.Drawing.Size(411, 251);
             this.dgvCashier.TabIndex = 17;
+            this.dgvCashier.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCashier_RowHeaderMouseDoubleClick);
             // 
             // label1
             // 
@@ -130,8 +109,6 @@
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(435, 403);
             this.Controls.Add(this.pbBack);
-            this.Controls.Add(this.lblDelete);
-            this.Controls.Add(this.pbDelete);
             this.Controls.Add(this.pbSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label2);
@@ -143,7 +120,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAdminDeletePasswordCashier";
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCashier)).EndInit();
             this.ResumeLayout(false);
@@ -154,8 +130,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pbBack;
-        private System.Windows.Forms.Label lblDelete;
-        private System.Windows.Forms.PictureBox pbDelete;
         private System.Windows.Forms.PictureBox pbSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label2;
