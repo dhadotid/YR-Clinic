@@ -54,17 +54,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvRecipe = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
+            this.dgvRecipeLama = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtSearchRecipeLama = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrug)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecipe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecipeLama)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pbBack
             // 
             this.pbBack.Image = ((System.Drawing.Image)(resources.GetObject("pbBack.Image")));
-            this.pbBack.Location = new System.Drawing.Point(887, 10);
+            this.pbBack.Location = new System.Drawing.Point(1299, 12);
             this.pbBack.Name = "pbBack";
             this.pbBack.Size = new System.Drawing.Size(59, 49);
             this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -85,7 +91,7 @@
             // pbSearch
             // 
             this.pbSearch.Image = ((System.Drawing.Image)(resources.GetObject("pbSearch.Image")));
-            this.pbSearch.Location = new System.Drawing.Point(768, 92);
+            this.pbSearch.Location = new System.Drawing.Point(807, 91);
             this.pbSearch.Name = "pbSearch";
             this.pbSearch.Size = new System.Drawing.Size(53, 43);
             this.pbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +124,7 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(579, 101);
+            this.txtSearch.Location = new System.Drawing.Point(618, 101);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(183, 30);
             this.txtSearch.TabIndex = 71;
@@ -130,9 +136,9 @@
             this.label8.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(511, 105);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 26);
+            this.label8.Size = new System.Drawing.Size(106, 26);
             this.label8.TabIndex = 70;
-            this.label8.Text = "Search";
+            this.label8.Text = "Search Drug";
             // 
             // lblQty
             // 
@@ -313,16 +319,61 @@
             this.label10.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(511, 294);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 26);
+            this.label10.Size = new System.Drawing.Size(107, 26);
             this.label10.TabIndex = 78;
-            this.label10.Text = "Recipe";
+            this.label10.Text = "Drug Recipe";
+            // 
+            // dgvRecipeLama
+            // 
+            this.dgvRecipeLama.AllowUserToAddRows = false;
+            this.dgvRecipeLama.AllowUserToDeleteRows = false;
+            this.dgvRecipeLama.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecipeLama.Location = new System.Drawing.Point(952, 137);
+            this.dgvRecipeLama.Name = "dgvRecipeLama";
+            this.dgvRecipeLama.ReadOnly = true;
+            this.dgvRecipeLama.Size = new System.Drawing.Size(406, 336);
+            this.dgvRecipeLama.TabIndex = 79;
+            this.dgvRecipeLama.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRecipeLama_RowHeaderMouseClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1278, 92);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 82;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtSearchRecipeLama
+            // 
+            this.txtSearchRecipeLama.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchRecipeLama.Location = new System.Drawing.Point(1089, 102);
+            this.txtSearchRecipeLama.Name = "txtSearchRecipeLama";
+            this.txtSearchRecipeLama.Size = new System.Drawing.Size(183, 30);
+            this.txtSearchRecipeLama.TabIndex = 81;
+            this.txtSearchRecipeLama.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearchRecipeLama_KeyUp);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(966, 106);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(117, 26);
+            this.label11.TabIndex = 80;
+            this.label11.Text = "Search Recipe";
             // 
             // FCashierRecipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(958, 481);
+            this.ClientSize = new System.Drawing.Size(1370, 481);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtSearchRecipeLama);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.dgvRecipeLama);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dgvRecipe);
             this.Controls.Add(this.pbBack);
@@ -358,6 +409,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrug)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecipe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecipeLama)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,5 +443,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvRecipe;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dgvRecipeLama;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtSearchRecipeLama;
+        private System.Windows.Forms.Label label11;
     }
 }

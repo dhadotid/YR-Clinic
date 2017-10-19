@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAdminMenu));
-            this.lblReport = new System.Windows.Forms.Label();
-            this.pbReport = new System.Windows.Forms.PictureBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.lblPatient = new System.Windows.Forms.Label();
@@ -47,7 +45,6 @@
             this.pbDoctor = new System.Windows.Forms.PictureBox();
             this.lblYuher = new System.Windows.Forms.Label();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPatient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSpecialist)).BeginInit();
@@ -57,26 +54,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDoctor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblReport
-            // 
-            this.lblReport.AutoSize = true;
-            this.lblReport.Font = new System.Drawing.Font("Minion Pro", 14.25F);
-            this.lblReport.Location = new System.Drawing.Point(409, 388);
-            this.lblReport.Name = "lblReport";
-            this.lblReport.Size = new System.Drawing.Size(65, 26);
-            this.lblReport.TabIndex = 50;
-            this.lblReport.Text = "Report";
-            // 
-            // pbReport
-            // 
-            this.pbReport.Image = ((System.Drawing.Image)(resources.GetObject("pbReport.Image")));
-            this.pbReport.Location = new System.Drawing.Point(303, 353);
-            this.pbReport.Name = "pbReport";
-            this.pbReport.Size = new System.Drawing.Size(100, 96);
-            this.pbReport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbReport.TabIndex = 49;
-            this.pbReport.TabStop = false;
             // 
             // lblSearch
             // 
@@ -258,8 +235,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(549, 568);
-            this.Controls.Add(this.lblReport);
-            this.Controls.Add(this.pbReport);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.pbSearch);
             this.Controls.Add(this.lblPatient);
@@ -281,7 +256,6 @@
             this.Name = "FAdminMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Admin";
-            ((System.ComponentModel.ISupportInitialize)(this.pbReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPatient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSpecialist)).EndInit();
@@ -296,9 +270,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblReport;
-        private System.Windows.Forms.PictureBox pbReport;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.PictureBox pbSearch;
         private System.Windows.Forms.Label lblPatient;

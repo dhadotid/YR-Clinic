@@ -43,15 +43,12 @@
             this.lblNullGender = new System.Windows.Forms.Label();
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.rbMale = new System.Windows.Forms.RadioButton();
-            this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.lblNullDOB = new System.Windows.Forms.Label();
             this.lblNullName = new System.Windows.Forms.Label();
-            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtIdPatient = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -104,6 +101,7 @@
             this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDelete.TabIndex = 111;
             this.pbDelete.TabStop = false;
+            this.pbDelete.Click += new System.EventHandler(this.pbDelete_Click);
             // 
             // pbUpdate
             // 
@@ -114,6 +112,7 @@
             this.pbUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbUpdate.TabIndex = 110;
             this.pbUpdate.TabStop = false;
+            this.pbUpdate.Click += new System.EventHandler(this.pbUpdate_Click);
             // 
             // dgvPatient
             // 
@@ -125,6 +124,7 @@
             this.dgvPatient.ReadOnly = true;
             this.dgvPatient.Size = new System.Drawing.Size(656, 471);
             this.dgvPatient.TabIndex = 109;
+            this.dgvPatient.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPatient_RowHeaderMouseClick);
             // 
             // label15
             // 
@@ -153,6 +153,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(206, 30);
             this.txtSearch.TabIndex = 106;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // lblNullAddress
             // 
@@ -213,24 +214,12 @@
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
             // 
-            // lblPhoneNumber
-            // 
-            this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Font = new System.Drawing.Font("Minion Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumber.ForeColor = System.Drawing.Color.Red;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(175, 259);
-            this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(287, 22);
-            this.lblPhoneNumber.TabIndex = 100;
-            this.lblPhoneNumber.Text = "*Please enter a valid phone number format";
-            this.lblPhoneNumber.Visible = false;
-            // 
             // lblNullDOB
             // 
             this.lblNullDOB.AutoSize = true;
             this.lblNullDOB.Font = new System.Drawing.Font("Minion Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNullDOB.ForeColor = System.Drawing.Color.Red;
-            this.lblNullDOB.Location = new System.Drawing.Point(50, 201);
+            this.lblNullDOB.Location = new System.Drawing.Point(50, 245);
             this.lblNullDOB.Name = "lblNullDOB";
             this.lblNullDOB.Size = new System.Drawing.Size(402, 22);
             this.lblNullDOB.TabIndex = 99;
@@ -242,26 +231,17 @@
             this.lblNullName.AutoSize = true;
             this.lblNullName.Font = new System.Drawing.Font("Minion Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNullName.ForeColor = System.Drawing.Color.Red;
-            this.lblNullName.Location = new System.Drawing.Point(175, 143);
+            this.lblNullName.Location = new System.Drawing.Point(175, 187);
             this.lblNullName.Name = "lblNullName";
             this.lblNullName.Size = new System.Drawing.Size(150, 22);
             this.lblNullName.TabIndex = 98;
             this.lblNullName.Text = "*Please fill in the data";
             this.lblNullName.Visible = false;
             // 
-            // txtPhoneNumber
-            // 
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(179, 226);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(228, 30);
-            this.txtPhoneNumber.TabIndex = 97;
-            this.txtPhoneNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhoneNumber_Validating);
-            // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(179, 110);
+            this.txtName.Location = new System.Drawing.Point(179, 154);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(228, 30);
             this.txtName.TabIndex = 95;
@@ -271,7 +251,7 @@
             // 
             this.txtIdPatient.Enabled = false;
             this.txtIdPatient.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdPatient.Location = new System.Drawing.Point(179, 72);
+            this.txtIdPatient.Location = new System.Drawing.Point(179, 116);
             this.txtIdPatient.Name = "txtIdPatient";
             this.txtIdPatient.Size = new System.Drawing.Size(228, 30);
             this.txtIdPatient.TabIndex = 94;
@@ -296,21 +276,11 @@
             this.label6.TabIndex = 92;
             this.label6.Text = "Patient Gender";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 230);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 26);
-            this.label5.TabIndex = 91;
-            this.label5.Text = "Phone Number";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 172);
+            this.label4.Location = new System.Drawing.Point(13, 216);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 26);
             this.label4.TabIndex = 90;
@@ -320,7 +290,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 114);
+            this.label3.Location = new System.Drawing.Point(13, 158);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 26);
             this.label3.TabIndex = 89;
@@ -330,7 +300,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 72);
+            this.label2.Location = new System.Drawing.Point(13, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 26);
             this.label2.TabIndex = 88;
@@ -349,7 +319,7 @@
             // dtp_DOB
             // 
             this.dtp_DOB.Font = new System.Drawing.Font("Minion Pro", 14.25F);
-            this.dtp_DOB.Location = new System.Drawing.Point(179, 168);
+            this.dtp_DOB.Location = new System.Drawing.Point(179, 212);
             this.dtp_DOB.Name = "dtp_DOB";
             this.dtp_DOB.Size = new System.Drawing.Size(228, 30);
             this.dtp_DOB.TabIndex = 115;
@@ -376,15 +346,12 @@
             this.Controls.Add(this.lblNullGender);
             this.Controls.Add(this.rbFemale);
             this.Controls.Add(this.rbMale);
-            this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.lblNullDOB);
             this.Controls.Add(this.lblNullName);
-            this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtIdPatient);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -420,15 +387,12 @@
         private System.Windows.Forms.Label lblNullGender;
         private System.Windows.Forms.RadioButton rbFemale;
         private System.Windows.Forms.RadioButton rbMale;
-        private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.Label lblNullDOB;
         private System.Windows.Forms.Label lblNullName;
-        private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtIdPatient;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

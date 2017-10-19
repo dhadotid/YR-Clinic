@@ -58,9 +58,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPayment = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
+            this.dgvPatient = new System.Windows.Forms.DataGridView();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.pbSearch = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDateTreatment
@@ -332,21 +338,62 @@
             this.dgvPayment.AllowUserToAddRows = false;
             this.dgvPayment.AllowUserToDeleteRows = false;
             this.dgvPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPayment.Location = new System.Drawing.Point(429, 161);
+            this.dgvPayment.Location = new System.Drawing.Point(429, 342);
             this.dgvPayment.Name = "dgvPayment";
             this.dgvPayment.ReadOnly = true;
-            this.dgvPayment.Size = new System.Drawing.Size(328, 431);
+            this.dgvPayment.Size = new System.Drawing.Size(328, 156);
             this.dgvPayment.TabIndex = 84;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(429, 132);
+            this.label14.Location = new System.Drawing.Point(429, 310);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(63, 26);
             this.label14.TabIndex = 85;
             this.label14.Text = "Recipe";
+            // 
+            // dgvPatient
+            // 
+            this.dgvPatient.AllowUserToAddRows = false;
+            this.dgvPatient.AllowUserToDeleteRows = false;
+            this.dgvPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPatient.Location = new System.Drawing.Point(434, 151);
+            this.dgvPatient.Name = "dgvPatient";
+            this.dgvPatient.ReadOnly = true;
+            this.dgvPatient.Size = new System.Drawing.Size(328, 156);
+            this.dgvPatient.TabIndex = 86;
+            this.dgvPatient.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPatient_RowHeaderMouseClick);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(442, 122);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(66, 26);
+            this.label15.TabIndex = 87;
+            this.label15.Text = "Patient";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(514, 115);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(182, 30);
+            this.txtSearch.TabIndex = 89;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            // 
+            // pbSearch
+            // 
+            this.pbSearch.Image = ((System.Drawing.Image)(resources.GetObject("pbSearch.Image")));
+            this.pbSearch.Location = new System.Drawing.Point(702, 115);
+            this.pbSearch.Name = "pbSearch";
+            this.pbSearch.Size = new System.Drawing.Size(37, 30);
+            this.pbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSearch.TabIndex = 88;
+            this.pbSearch.TabStop = false;
             // 
             // FCashierPayment
             // 
@@ -354,6 +401,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(769, 628);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.pbSearch);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.dgvPatient);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.dgvPayment);
             this.Controls.Add(this.txtDateTreatment);
@@ -391,6 +442,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,5 +480,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPayment;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridView dgvPatient;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.PictureBox pbSearch;
     }
 }

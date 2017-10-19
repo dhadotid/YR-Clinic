@@ -23,8 +23,8 @@ namespace YR_Clinic
         {
             InitializeComponent();
             txtRD.Text = autoid();
-            txtIdRecipe.Text = autoidrecipe();
             isidgvdrug();
+            isidgvRecipe();
 
             dt.Columns.Add("ID Drug");
             dt.Columns.Add("DrugName");
@@ -95,39 +95,7 @@ namespace YR_Clinic
             }
             return newcode;
         }
-
-        private string autoidrecipe()
-        {
-            string info = "";
-            string newcode = "";
-            try
-            {
-                info = con.openconnection();
-                if (info == "OK")
-                {
-                    string query = "select top 1 Id_Recipe from Recipe.Recipe order by Id_Recipe desc;";
-                    SqlCommand com = new SqlCommand(query, con.con);
-                    SqlDataReader dr = com.ExecuteReader();
-                    while (dr.Read())
-                    {
-                        string input = dr["Id_Recipe"].ToString();
-                        //string angka = input.Substring(1, 5);
-                        newcode = input;
-                    }
-                    dr.Close();
-                }
-                if (con.closeconnection() == "OK")
-                {
-                    info = "OK";
-                }
-            }
-            catch (Exception xe)
-            {
-                MessageBox.Show(xe.Message);
-            }
-            return newcode;
-        }
-
+        
         private void isidgvdrug()
         {
             string info = "";
@@ -145,6 +113,35 @@ namespace YR_Clinic
                         dt.Load(sr);
                         dgvDrug.DataSource = dt;
                         dgvDrug.Columns[4].DefaultCellStyle.Format = "yyyy-MM-dd";
+                    }
+                }
+                if (con.closeconnection() == "OK")
+                {
+                    info = "OK";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void isidgvRecipe()
+        {
+            string info = "";
+            try
+            {
+                info = con.openconnection();
+                if (info == "OK")
+                {
+                    string query = "select a.Id_Recipe, b.Patient_Name, c.Diagnose from Patient.Treatment c join Patient.Patient b on c.Id_Patient = b.Id_Patient join Recipe.Recipe a on c.Id_Recipe = a.Id_Recipe join Patient.Payment x on c.Id_Treatment = x.Id_Treatment where x.isPay = 0";
+                    SqlCommand com = new SqlCommand(query, con.con);
+                    SqlDataReader sr = com.ExecuteReader();
+                    if (sr.HasRows)
+                    {
+                        DataTable dt = new DataTable();
+                        dt.Load(sr);
+                        dgvRecipeLama.DataSource = dt;
                     }
                 }
                 if (con.closeconnection() == "OK")
@@ -268,6 +265,38 @@ namespace YR_Clinic
                 dgvRecipe.Rows.RemoveAt(row.Index);
             }
         }
+
+        private void dgvRecipeLama_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtIdRecipe.Text = dgvRecipeLama.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void txtSearchRecipeLama_KeyUp(object sender, KeyEventArgs e)
+        {
+            string info = "";
+            try
+            {
+                info = con.openconnection();
+                if (info == "OK")
+                {
+                    string query = "select a.Id_Recipe, b.Patient_Name, c.Diagnose from Patient.Treatment c join Patient.Patient b on c.Id_Patient = b.Id_Patient join Recipe.Recipe a on c.Id_Recipe = a.Id_Recipe join Patient.Payment x on c.Id_Treatment = x.Id_Treatment where x.isPay = 0 and b.Patient_Name like '" + txtSearchRecipeLama.Text + "%'";
+                    //SqlCommand com = new SqlCommand(query, con.con);
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, con.con);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dgvRecipeLama.DataSource = dt;
+                }
+                if (con.closeconnection() == "OK")
+                {
+                    info = "OK";
+                }
+            }
+            catch (Exception xe)
+            {
+                MessageBox.Show(xe.Message);
+            }
+        }
+
         private void pbSave_Click(object sender, EventArgs e)
         {
             if(txtDose.Text == "" || txtSubtotal.Text == "")
@@ -337,7 +366,6 @@ namespace YR_Clinic
                                 dt.Rows.Add(dr);
                                 dgvRecipe.DataSource = dt;
 
-                                txtIdRecipe.Text = autoidrecipe();
                                 txtRD.Text = autoid();
                                 txtDrug.Clear();
                                 txtQty.Clear();
